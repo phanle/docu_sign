@@ -43,7 +43,10 @@ module DocusignFactory
                   :user_name => "Recipient 1",
                   :email => "donald@donaldpiret.com",
                   :type => "Signer",
-                  :require_id_lookup => false
+                  :require_id_lookup => false,
+                  :captive_info => {
+                    "ClientUserId" => 1
+                  }
     end
     # Tabs
     envelope.tabs do |e|

@@ -1,6 +1,6 @@
 require 'vcr'
 
-VCR.config do |c|
+VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  c.stub_with :webmock # or :fakeweb
+  c.hook_into :webmock # or :fakeweb
 end
